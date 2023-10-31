@@ -1,0 +1,17 @@
+body {
+    margin: 0;
+    background-color: #ccc;
+}
+
+div {
+    display: grid;
+    place-items: center;
+}
+
+button {
+    margin-top: 10px;
+}
+
+input {
+    margin-top: 10px;
+}
