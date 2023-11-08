@@ -4,26 +4,67 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Desafio Complementar Aula 6</title>    
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+    <!-- <link rel="stylesheet" href="style.css"> -->
 </head>
 <body>
-    <div>
-        <h1>Desafio complementar - Ciclos e iterações</h1>
-        <p>Insira abaixo um número para diminuir de 100 até chegar no 0.</p>
-
-        <input type="number" id="number" placeholder="Número">
-        <button onclick="decrementaNumeros()">Iniciar</button>        
+    <div class="container">
+        <div class="d-flex justify-content-center">
+            <h1>Desafio - Incorporar Objetos no Simulador</h1>
+        </div>
+        <div>
+            <h4>Cadastrar Camisas</h4>
+                <div class="form-group">
+                  <label for="exampleFormControlInput1">Nome do Clube</label>
+                  <input type="text" class="form-control" id="nomeClube">
+                </div>
+                <div class="form-group form-row">
+                    <div class="col">
+                        <label for="exampleFormControlSelect1">Modelo</label>
+                        <select class="form-control" id="modelo">
+                          <option>Home</option>
+                          <option>Away</option>
+                        </select>
+                    </div>
+                    <div class="col">
+                        <label for="exampleFormControlSelect1">Tamanho</label>
+                        <select class="form-control" id="tamanho">
+                          <option>P</option>
+                          <option>M</option>
+                          <option>G</option>
+                        </select>
+                    </div>
+                    <div class="col">
+                        <label for="exampleFormControlInput1">Temporada</label>
+                        <input type="text" class="form-control" id="temporada" placeholder="Ex.: 2023/2024">
+                    </div>
+                    <div class="col">
+                        <label for="exampleFormControlInput1">Quantidade</label>
+                        <input type="number" class="form-control" id="quantidade">
+                    </div>
+                </div>                  
+              <button class="btn btn-primary mb-2" onclick="cadastrar()">Cadastrar</button>
+        </div>
+        <div class="mt-5">
+            <h4>Camisas</h4>
+        </div>
+        <div>
+            <table class="table">
+                <thead>
+                  <tr>
+                    <th scope="col">#</th>
+                    <th scope="col">Clube</th>
+                    <th scope="col">Modelo</th>
+                    <th scope="col">Temporada</th>
+                    <th scope="col">Tamanho</th>
+                    <th scope="col">Quantidade</th>
+                  </tr>
+                </thead>
+                <tbody id="corpoTabela">
+                </tbody>
+              </table>
+        </div>
     </div>
-
-    <div>
-        <p>Insira abaixo um número para diminuir de 100 até chegar no 0.</p>
-
-        <input type="number" id="valor" placeholder="Valor">
-        <input type="number" id="parcelas" placeholder="Número de Parcelas">
-        <button onclick="valorParcelas()">Iniciar</button>
-        <p id="mensagem"></p>
-    </div>
-
     <script src="scripts.js"></script>
 </body>
 </html>
